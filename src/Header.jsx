@@ -19,7 +19,7 @@ const Header = () => {
         <img
           src="/vslogo.jpg"
           alt="Logo"
-          className=" h-[80px] animate__animated animate__bounceIn"
+          className="h-[50px] sm:h-[80px] animate__animated animate__bounceIn"
         />
 
         {/* Navigation for Desktop */}

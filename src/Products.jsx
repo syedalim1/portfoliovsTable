@@ -4,10 +4,10 @@ import "animate.css";
 const Products = () => {
   const productList = [
     {
-      name: "School T-Shirt",
-      image: "/school_tshirt.png",
+      name: "School Tie",
+      image: "/school_tie.png",
       details:
-        "Our school T-shirts are made from high-quality cotton for maximum comfort and durability. Available in various sizes and colors to match your school uniform needs.",
+        "Elegant school ties with vibrant patterns and superior stitching, designed to enhance the uniform's overall look.",
     },
     {
       name: "School Belt",
@@ -21,12 +21,7 @@ const Products = () => {
       details:
         "Soft, breathable, and high-quality socks for all-day comfort. Available in different sizes and colors to complement the uniform.",
     },
-    {
-      name: "School Tie",
-      image: "/school_tie.png",
-      details:
-        "Elegant school ties with vibrant patterns and superior stitching, designed to enhance the uniform's overall look.",
-    },
+
     {
       name: "School Shorts",
       image: "/Shorts.png",
@@ -38,6 +33,12 @@ const Products = () => {
       image: "/Badge.png",
       details:
         "Our custom school badges are made from high-quality materials, designed for durability and a professional look. Available in various sizes and customizable with your school's logo.",
+    },
+    {
+      name: "School T-Shirt",
+      image: "/school_tshirt.png",
+      details:
+        "Our school T-shirts are made from high-quality cotton for maximum comfort and durability. Available in various sizes and colors to match your school uniform needs.",
     },
   ];
 

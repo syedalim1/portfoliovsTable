@@ -3,7 +3,7 @@ import "animate.css";
 
 const AboutUs = () => {
   return (
-    <div className="my-20  px-6 py-10  rounded-lg ">
+    <div className="my-10  px-6 py-10  rounded-lg ">
       <div>
         {/* Logo Section */}
         <div className="flex justify-center mb-8"></div>
