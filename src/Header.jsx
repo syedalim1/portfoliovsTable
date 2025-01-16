@@ -8,20 +8,19 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <header className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white text-black shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="flex items-center space-x-4">
-          <img
-            src="/vslogo.jpg"
-            alt="Logo"
-            className="h-[50px] rounded-full animate__animated animate__bounceIn"
-          />
-          <h1 className="text-3xl font-bold tracking-wide animate__animated animate__fadeInDown">
-            VS LABEL
-          </h1>
-        </div>
+        <img
+          src="/vslogo.jpg"
+          alt="Logo"
+          className=" h-[80px] animate__animated animate__bounceIn"
+        />
 
         {/* Navigation for Desktop */}
         <nav className="hidden md:flex space-x-8 text-lg font-semibold">
@@ -34,7 +33,7 @@ const Header = () => {
             <a
               key={index}
               href={item.link}
-              className="hover:underline hover:text-yellow-200 transition duration-300"
+              className="hover:underline hover:text-orange-500 transition duration-300"
             >
               {item.label}
             </a>
@@ -45,7 +44,7 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +66,8 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-purple-500 px-6 pb-4 animate__animated animate__fadeIn">
-          <nav className="flex flex-col space-y-4">
+        <div className="md:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-40">
+          <div className="flex flex-col space-y-4 p-8 bg-white w-3/4 mx-auto mt-10 rounded-lg">
             {[
               { label: "Home", link: "#" },
               { label: "About Us", link: "#about" },
@@ -78,12 +77,13 @@ const Header = () => {
               <a
                 key={index}
                 href={item.link}
-                className="block text-lg text-white hover:bg-purple-700 px-4 py-2 rounded transition duration-300"
+                className="block text-lg text-black hover:bg-purple-700 px-4 py-2 rounded transition duration-300"
+                onClick={closeMobileMenu} // Close menu on link click
               >
                 {item.label}
               </a>
             ))}
-          </nav>
+          </div>
         </div>
       )}
     </header>
